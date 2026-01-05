@@ -9,3 +9,52 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.semaforo {
+  background: black;
+  padding: 20px;
+  width: 120px;
+  margin: 30px auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.luz {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 12px auto;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.rojo {
+  background: rgb(238, 5, 5);
+}
+
+.amarillo {
+  background: rgb(241, 213, 7);
+}
+
+.verde {
+  background: rgb(3, 88, 3);
+}
+
+/* Efecto de la luz al dar click */
+.encendida {
+  filter: brightness(1.4) saturate(1.6);
+  box-shadow:
+    0 0 10px currentColor,
+    0 0 25px currentColor,
+    0 0 40px currentColor;
+  transform: scale(1.05);
+}
